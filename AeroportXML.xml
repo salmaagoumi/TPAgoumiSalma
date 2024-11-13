@@ -1,161 +1,111 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Aeroport SYSTEM "aeroport.dtd">
-<Aeroport>
-  <Employes>
-    <Employe id="01">
-      <Nom>Lionel</Nom>
-      <Age>46</Age>
-      <Poste>Pilote</Poste>
-      <Vols>V01 V03 V04 V07</Vols>
-    </Employe>
-    <Employe id="02">
-      <Nom>Martin</Nom>
-      <Age>34</Age>
-      <Poste>Steward</Poste>
-      <Vols>V02 V05</Vols>
-    </Employe>
-    <Employe id="03">
-      <Nom>Sarah</Nom>
-      <Age>26</Age>
-      <Poste>Steward</Poste>
-      <Vols>V03 V06 V07</Vols>
-    </Employe>
-  </Employes>
+<!DOCTYPE aeroport SYSTEM "AeroportDTD.dtd">
+<aeroport>
 
-  <Pistes>
-    <Piste id="P01">
-      <Longueur>3000</Longueur>
-      <Largeur>60</Largeur>
-      <Type>Commercial</Type>
-    </Piste>
-    <Piste id="P02">
-      <Longueur>2500</Longueur>
-      <Largeur>45</Largeur>
-      <Type>Privé</Type>
-    </Piste>
-  </Pistes>
+    <employes>
 
-  <Compagnies>
-    <Compagnie id="C01">
-      <Nom>Air France</Nom>
-      <Pays>France</Pays>
-    </Compagnie>
-    <Compagnie id="C02">
-      <Nom>Air Maroc</Nom>
-      <Pays>Maroc</Pays>
-    </Compagnie>
-    <Compagnie id="C03">
-      <Nom>Ryanair</Nom>
-      <Pays>Irlande</Pays>
-    </Compagnie>
-  </Compagnies>
+        <employe>
+            <id>1</id>
+            <nom>Dupont</nom>
+            <prenom>Paul</prenom>
+            <age>25</age>
+            <poste>Technicien</poste>
+            <compagnie>Aéroport</compagnie>
+        </employe>
 
-  <Avions>
-    <Avion id="AF01">
-      <Modele>Airbus A320</Modele>
-      <Capacite>180</Capacite>
-      <Compagnie>C01</Compagnie>
-    </Avion>
-    <Avion id="AF02">
-      <Modele>Boeing 777</Modele>
-      <Capacite>396</Capacite>
-      <Compagnie>C01</Compagnie>
-    </Avion>
-    <Avion id="AM01">
-      <Modele>Boeing 737</Modele>
-      <Capacite>189</Capacite>
-      <Compagnie>C02</Compagnie>
-    </Avion>
-    <Avion id="AM02">
-      <Modele>Embraer E190</Modele>
-      <Capacite>98</Capacite>
-      <Compagnie>C02</Compagnie>
-    </Avion>
-    <Avion id="RY01">
-      <Modele>Boeing 737-800</Modele>
-      <Capacite>189</Capacite>
-      <Compagnie>C03</Compagnie>
-    </Avion>
-    <Avion id="RY02">
-      <Modele>Boeing 737 MAX 200</Modele>
-      <Capacite>197</Capacite>
-      <Compagnie>C03</Compagnie>
-    </Avion>
-  </Avions>
+        <employe>
+            <id>2</id>
+            <nom>Martin</nom>
+            <prenom>Claire</prenom>
+            <age>28</age>
+            <poste>Agent de sécurité</poste>
+            <compagnie>Aéroport</compagnie>
+        </employe>
+        
+        <employe>
+          <id>3</id>
+          <nom>Lemoine</nom>
+          <prenom>Jacques</prenom>
+          <age>35</age>
+          <poste>Pilote</poste>
+          <compagnie>Aéroport</compagnie>
+    </employe>
 
-  <Vols>
-    <Vol id="V01">
-      <Origine>Paris</Origine>
-      <Destination>New York</Destination>
-      <Compagnie>C01</Compagnie>
-      <Avion>AF01</Avion>
-      <Piste>P01</Piste>
-      <Equipage>
-        <Employe id="01">Lionel</Employe>
-      </Equipage>
-    </Vol>
-    <Vol id="V02">
-      <Origine>Paris</Origine>
-      <Destination>Tokyo</Destination>
-      <Compagnie>C01</Compagnie>
-      <Avion>AF02</Avion>
-      <Piste>P01</Piste>
-      <Equipage>
-        <Employe id="02">Martin</Employe>
-      </Equipage>
-    </Vol>
-    <Vol id="V03">
-      <Origine>Paris</Origine>
-      <Destination>Los Angeles</Destination>
-      <Compagnie>C01</Compagnie>
-      <Avion>AF02</Avion>
-      <Piste>P01</Piste>
-      <Equipage>
-        <Employe id="01">Lionel</Employe>
-        <Employe id="03">Sarah</Employe>
-      </Equipage>
-    </Vol>
-    <Vol id="V04">
-      <Origine>Casablanca</Origine>
-      <Destination>Madrid</Destination>
-      <Compagnie>C02</Compagnie>
-      <Avion>AM01</Avion>
-      <Piste>P01</Piste>
-      <Equipage>
-        <Employe id="01">Lionel</Employe>
-      </Equipage>
-    </Vol>
-    <Vol id="V05">
-      <Origine>Casablanca</Origine>
-      <Destination>Dubai</Destination>
-      <Compagnie>C02</Compagnie>
-      <Avion>AM02</Avion>
-      <Piste>P02</Piste>
-      <Equipage>
-        <Employe id="02">Martin</Employe>
-      </Equipage>
-    </Vol>
-    <Vol id="V06">
-      <Origine>Dublin</Origine>
-      <Destination>Berlin</Destination>
-      <Compagnie>C03</Compagnie>
-      <Avion>RY01</Avion>
-      <Piste>P01</Piste>
-      <Equipage>
-        <Employe id="03">Sarah</Employe>
-      </Equipage>
-    </Vol>
-    <Vol id="V07">
-      <Origine>Dublin</Origine>
-      <Destination>Paris</Destination>
-      <Compagnie>C03</Compagnie>
-      <Avion>RY02</Avion>
-      <Piste>P01</Piste>
-      <Equipage>
-        <Employe id="01">Lionel</Employe>
-        <Employe id="03">Sarah</Employe>
-      </Equipage>
-    </Vol>
-  </Vols>
+    </employes>
 
-</Aeroport>
+    <pistes>
+        <piste>
+            <id>1</id>
+            <nom>Piste A</nom>
+            <longueur>3000</longueur>
+            <etat>Libre</etat>
+        </piste>
+        <piste>
+            <id>2</id>
+            <nom>Piste B</nom>
+            <longueur>2500</longueur>
+            <etat>Fermée</etat>
+        </piste>
+    </pistes>
+
+    <compagnies>
+        <compagnie>
+            <id>1</id>
+            <nom>Air France</nom>
+            <pays>France</pays>
+        </compagnie>
+        <compagnie>
+            <id>2</id>
+            <nom>Emirates</nom>
+            <pays>Émirats</pays>
+        </compagnie>
+    </compagnies>
+
+    <avions>
+        <avion>
+            <id>1</id>
+            <modele>A320</modele>
+            <capacite>150</capacite>
+            <compagnie>Air France</compagnie>
+        </avion>
+        <avion>
+            <id>2</id>
+            <modele>Boeing 777</modele>
+            <capacite>350</capacite>
+            <compagnie>Emirates</compagnie>
+        </avion>
+    </avions>
+
+   <vols>
+    <vol>
+        <id>AF123</id>
+        <compagnie>Air France</compagnie>
+        <depart>Paris</depart>
+        <arrivee>New York</arrivee>
+        <heure_depart>01/12/2024 08:00</heure_depart>
+        <heure_arrivee>01/12/2024 12:00</heure_arrivee>
+        <date>01/12/2024</date>
+        <avion_ref>1</avion_ref>
+        <employes>
+            <employe_ref>1</employe_ref> 
+            <employe_ref>3</employe_ref> 
+        </employes>
+    </vol>
+    <vol>
+        <id>EK456</id>
+        <compagnie>Emirates</compagnie>
+        <depart>Dubai</depart>
+        <arrivee>London</arrivee>
+        <heure_depart>05/12/2024 15:00</heure_depart>
+        <heure_arrivee>05/12/2024 20:00</heure_arrivee>
+        <date>05/12/2024</date>
+        <avion_ref>2</avion_ref>
+        <employes>
+            <employe_ref>2</employe_ref>
+            <employe_ref>3</employe_ref> 
+        </employes>
+    </vol>
+</vols>
+
+
+</aeroport>
