@@ -1,33 +1,28 @@
-﻿<!ELEMENT Aeroport (Employes, Pistes, Compagnies, Avions, Vols)>
-<!ELEMENT Employes (Employe+)>
-<!ELEMENT Employe (Nom?, Age?, Poste?, Vols?)>
-<!ATTLIST Employe
-          id CDATA #REQUIRED>
-<!ELEMENT Nom (#PCDATA)>
-<!ELEMENT Age (#PCDATA)>
-<!ELEMENT Poste (#PCDATA)>
-<!ELEMENT Vols (Vol+)>
-<!ELEMENT Pistes (Piste+)>
-<!ELEMENT Piste (Longueur?, Largeur?, Type?)>
-<!ATTLIST Piste
-          id CDATA #IMPLIED>
-<!ELEMENT Longueur (#PCDATA)>
-<!ELEMENT Largeur (#PCDATA)>
-<!ELEMENT Type (#PCDATA)>
-<!ELEMENT Compagnies (Compagnie+)>
-<!ELEMENT Compagnie (Nom?, Pays?)>
-<!ATTLIST Compagnie
-          id CDATA #IMPLIED>
-<!ELEMENT Pays (#PCDATA)>
-<!ELEMENT Avions (Avion+)>
-<!ELEMENT Avion (Modele?, Capacite?, Compagnie?)>
-<!ATTLIST Avion
-          id CDATA #IMPLIED>
-<!ELEMENT Modele (#PCDATA)>
-<!ELEMENT Capacite (#PCDATA)>
-<!ELEMENT Vol (Origine, Destination, Compagnie, Avion, Piste, Equipage)>
-<!ATTLIST Vol
-          id CDATA #REQUIRED>
-<!ELEMENT Origine (#PCDATA)>
-<!ELEMENT Destination (#PCDATA)>
-<!ELEMENT Equipage (Employe+)>
+﻿<!ELEMENT aeroport (employes, pistes, compagnies, avions, vols)>
+<!ELEMENT employes (employe+, employe_ref?)>
+<!ELEMENT employe (id, nom, prenom, age, poste, compagnie)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT poste (#PCDATA)>
+<!ELEMENT compagnie (id?, nom?, pays?)>
+<!ELEMENT pistes (piste+)>
+<!ELEMENT piste (id, nom, longueur, etat)>
+<!ELEMENT longueur (#PCDATA)>
+<!ELEMENT etat (#PCDATA)>
+<!ELEMENT compagnies (compagnie+)>
+<!ELEMENT pays (#PCDATA)>
+<!ELEMENT avions (avion+)>
+<!ELEMENT avion (id, modele, capacite, compagnie)>
+<!ELEMENT modele (#PCDATA)>
+<!ELEMENT capacite (#PCDATA)>
+<!ELEMENT vols (vol+)>
+<!ELEMENT vol (id, compagnie, depart, arrivee, heure_depart, heure_arrivee, date, avion_ref, employes)>
+<!ELEMENT depart (#PCDATA)>
+<!ELEMENT arrivee (#PCDATA)>
+<!ELEMENT heure_depart (#PCDATA)>
+<!ELEMENT heure_arrivee (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT avion_ref (#PCDATA)>
+<!ELEMENT employe_ref (#PCDATA)>
