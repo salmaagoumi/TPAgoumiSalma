@@ -1,0 +1,23 @@
+{
+    "vols": [
+      {
+        "id": "V01",
+        "origine": "Paris",
+        "destination": "New York",
+        "compagnie": "Air France",
+        "avion": "Boeing 747",
+        "piste": "Piste 1",
+        "equipage": ["Lionel", "Martin"]
+      },
+      {
+        "id": "V02",
+        "origine": "Paris",
+        "destination": "Tokyo",
+        "compagnie": "Air France",
+        "avion": "Airbus A380",
+        "piste": "Piste 2",
+        "equipage": ["Sophie", "Julien"]
+      }
+    ]
+  }
+  

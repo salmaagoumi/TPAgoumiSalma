@@ -1,0 +1,33 @@
+﻿<!ELEMENT Aeroport (Employes, Pistes, Compagnies, Avions, Vols)>
+<!ELEMENT Employes (Employe+)>
+<!ELEMENT Employe (Nom?, Age?, Poste?, Vols?)>
+<!ATTLIST Employe
+          id CDATA #REQUIRED>
+<!ELEMENT Nom (#PCDATA)>
+<!ELEMENT Age (#PCDATA)>
+<!ELEMENT Poste (#PCDATA)>
+<!ELEMENT Vols (Vol+)>
+<!ELEMENT Pistes (Piste+)>
+<!ELEMENT Piste (Longueur?, Largeur?, Type?)>
+<!ATTLIST Piste
+          id CDATA #IMPLIED>
+<!ELEMENT Longueur (#PCDATA)>
+<!ELEMENT Largeur (#PCDATA)>
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT Compagnies (Compagnie+)>
+<!ELEMENT Compagnie (Nom?, Pays?)>
+<!ATTLIST Compagnie
+          id CDATA #IMPLIED>
+<!ELEMENT Pays (#PCDATA)>
+<!ELEMENT Avions (Avion+)>
+<!ELEMENT Avion (Modele?, Capacite?, Compagnie?)>
+<!ATTLIST Avion
+          id CDATA #IMPLIED>
+<!ELEMENT Modele (#PCDATA)>
+<!ELEMENT Capacite (#PCDATA)>
+<!ELEMENT Vol (Origine, Destination, Compagnie, Avion, Piste, Equipage)>
+<!ATTLIST Vol
+          id CDATA #REQUIRED>
+<!ELEMENT Origine (#PCDATA)>
+<!ELEMENT Destination (#PCDATA)>
+<!ELEMENT Equipage (Employe+)>
